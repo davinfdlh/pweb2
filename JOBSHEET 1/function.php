@@ -12,7 +12,7 @@
         <label for="panjang">Panjang:</label>
         <input type="number" id="panjang" name="panjang"><br>
 
-        <label for="lebar">Lebar<t/>:</label>
+        <label for="lebar">Lebar:</label>
         <input type="number" id="lebar" name="lebar"><br>
 
         <input type="submit" value="Hitung">
