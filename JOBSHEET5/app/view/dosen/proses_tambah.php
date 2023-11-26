@@ -1,0 +1,20 @@
+<?php
+
+include_once '../../config.php';
+include_once '../../controllers/DosenController.php';
+
+$database = new database();
+$db = $database->getKoneksi();
+
+    $nidn = $_POST['nidn'];
+    $nama = $_POST['nama'];
+    $alamat = $_POST['alamat'];
+
+    $dosenController = new DosenController($db);
+    $result = $dosenController->createDosen($nidn, $nama, $alamat);
+
+    if($result){
+        header("location:dosen?message=succes");
+    }else{
+        header("location:tambahdosen");
+    }
